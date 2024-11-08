@@ -1,6 +1,6 @@
 package graph.db.app;
 
-import edu.princeton.cs.introcs.StdDraw;
+import edu.princeton.cs.algs4.StdDraw;
 
 public class DrawPaper {
 

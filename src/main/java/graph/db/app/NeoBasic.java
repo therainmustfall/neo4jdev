@@ -13,6 +13,8 @@ import org.neo4j.driver.Session;
 import org.neo4j.driver.types.Node;
 import org.neo4j.driver.types.Relationship;
 
+import graph.db.app.utils.PnRc;
+
 public class NeoBasic {
     public static void main(String[] args) {
         Properties properties = new Properties();
@@ -31,12 +33,14 @@ public class NeoBasic {
 
             // Create nodes and a relationship
             // String createQuery = "CREATE (a:Person {name: 'Alice'})-[:FRIENDS_WITH]->(b:Person {name: 'Bob'})";
-            // createNodeRelation(session, createQuery);
+            String query = PnRc.exportMerge("savedrecs.txt");
+            createNodeRelation(session, query);
             // String matchQuery = "MATCH (a:Person)-[r:FRIENDS_WITH]->(b:Person) RETURN a.name, b.name";
             // queryNodeRelation(session, matchQuery);
             // Visualizing
-            String cypherQuery = "MATCH (a)-[r]->(b) RETURN a, r, b";
-            graphVis(session, cypherQuery);
+            // String cypherQuery = "MATCH (a)-[r]->(b) RETURN a, r, b";
+            String cypString   = "MATCH (n) RETURN n";
+            graphVis(session, cypString);
         } catch (Exception e) {
             // TODO: handle exception
             e.printStackTrace();
@@ -49,6 +53,7 @@ public class NeoBasic {
             System.out.println("Node and relationship created successfully.");
         } catch (Exception e) {
             // TODO: handle exception
+            e.printStackTrace();
         }
     }
 
@@ -75,18 +80,25 @@ public class NeoBasic {
         // Process results and add to graph
         while (result.hasNext()) {
             Record record = result.next();
-            Node nodeA = record.get("a").asNode();
-            Node nodeB = record.get("b").asNode();
-            Relationship relationship = record.get("r").asRelationship();
-            
-            String aId = nodeA.elementId();
-            String bId = nodeB.elementId();
-            if (graph.getNode(aId) == null)
-                graph.addNode(nodeA.elementId()).setAttribute("label", nodeA.get("name").asString());
-            if (graph.getNode(bId) == null)
-            graph.addNode(nodeB.elementId()).setAttribute("label", nodeB.get("name").asString());
-            
-            graph.addEdge(relationship.elementId(), nodeA.elementId(), nodeB.elementId()).setAttribute("label", relationship.type());     
+            Node erNode = record.get("n").asNode();
+            graph.addNode(erNode.elementId());
+
+            if (record.containsKey("a") && record.containsKey("b")) {
+                System.out.println(record.get("a"));
+                Node nodeA = record.get("a").asNode();
+                Node nodeB = record.get("b").asNode();
+                Relationship relationship = record.get("r").asRelationship();
+                
+                String aId = nodeA.elementId();
+                String bId = nodeB.elementId();
+                if (graph.getNode(aId) == null)
+                    graph.addNode(nodeA.elementId()).setAttribute("label", nodeA.get("name").asString());
+                if (graph.getNode(bId) == null)
+                graph.addNode(nodeB.elementId()).setAttribute("label", nodeB.get("name").asString());
+                
+                graph.addEdge(relationship.elementId(), nodeA.elementId(), nodeB.elementId()).setAttribute("label", relationship.type());     
+
+            }
         }
         System.setProperty("org.graphstream.ui", "swing");
         graph.display();

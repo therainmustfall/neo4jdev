@@ -57,8 +57,8 @@
     </dependency>
 
     <dependency>
-    <groupId>edu.princeton.cs.introcs</groupId>
-    <artifactId>stdlib-package</artifactId>
+    <groupId>edu.princeton.cs.algs4</groupId>
+    <artifactId>algs4</artifactId>
     <version>1.0.0</version>
 </dependency>
   </dependencies>

@@ -1,0 +1,65 @@
+﻿FN Clarivate Analytics Web of Science
+VR 1.0
+PT J
+AU Chen, SK
+   Fang, RJ
+   Zheng, XQ
+AF Chen, Shukai
+   Fang, Rongjuan
+   Zheng, Xiangqi
+TI Wasserstein-Type Distances of Two-Type Continuous-State Branching
+   Processes in Levy Random Environments
+SO JOURNAL OF THEORETICAL PROBABILITY
+LA English
+DT Article
+DE Exponential ergodicity; Wasserstein distance; Branching process; Random
+   environment; Superprocess
+AB Under natural conditions, we prove exponential ergodicity in the L-1-Wasserstein distance of two-type continuous-state branching processes in Levy random environments with immigration. Furthermore, we express precisely the parameters of the exponent. The coupling method and the conditioned branching property play an important role in the approach. Using the tool of superprocesses, ergodicity in total variation distance is also proved.
+C1 [Chen, Shukai; Fang, Rongjuan] Fujian Normal Univ, Coll Math & Stat, Fuzhou 350007, Peoples R China.
+   [Zheng, Xiangqi] East China Univ Sci & Technol, Sch Math, Shanghai 200237, Peoples R China.
+C3 Fujian Normal University; East China University of Science & Technology
+RP Zheng, XQ (corresponding author), East China Univ Sci & Technol, Sch Math, Shanghai 200237, Peoples R China.
+EM skchen@fjnu.edu.cn; fangrj@fjnu.edu.cn; zhengxq@ecust.edu.cn
+RI Zheng, Xiangqi/LPP-6665-2024
+FU National Natural Science Foundation of China; Education and Scientific
+   Research Project for Young and Middle-aged Teachers in Fujian Provinceof
+   China [11531001, JAT200072]; China Postdoctoral Science Foundation
+   [12201119]; Special Fund for Central Universities [2022M720735]; 
+   [JGK00223001]
+FX This work was supported by the National Natural Science Foundation of
+   China (No. 11531001),the Education and Scientific Research Project for
+   Young and Middle-aged Teachers in Fujian Province of China (No.
+   JAT200072), the National Natural Science Foundation of China (No.
+   12201119), China Postdoctoral Science Foundation (No. 2022M720735) and
+   the Special Fund for Central Universities (No.JGK00223001)
+NR 23
+TC 1
+Z9 1
+U1 1
+U2 7
+PU SPRINGER/PLENUM PUBLISHERS
+PI NEW YORK
+PA 233 SPRING ST, NEW YORK, NY 10013 USA
+SN 0894-9840
+EI 1572-9230
+J9 J THEOR PROBAB
+JI J. Theor. Probab.
+PD SEP
+PY 2023
+VL 36
+IS 3
+BP 1572
+EP 1590
+DI 10.1007/s10959-022-01211-y
+EA DEC 2022
+PG 19
+WC Statistics & Probability
+WE Science Citation Index Expanded (SCI-EXPANDED)
+SC Mathematics
+GA O3UM2
+UT WOS:000905085500001
+OA Green Submitted
+DA 2024-11-08
+ER
+
+EF
